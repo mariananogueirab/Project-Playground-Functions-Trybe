@@ -76,7 +76,7 @@ function fizzBuzz(numbers) {
     } else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       fizzBuzzFinal[index] = 'fizzBuzz';
     } else {
-      fizzBuzzFinal[index] = 'bug!'
+      fizzBuzzFinal[index] = 'bug!';
     }
   }
   return fizzBuzzFinal;
@@ -134,7 +134,6 @@ function decode(frase) {
   }
   return fraseDecode;
 }
-console.log(decode('h3 th2r2!'))
 
 module.exports = {
   calcArea,
