@@ -62,35 +62,79 @@ function catAndMouse(mouse, cat1, cat2) {
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
   }
-  return 'os gatos trombam e o rato foge'
+  return 'os gatos trombam e o rato foge';
 }
 
 // Desafio 8
 function fizzBuzz(numbers) {
   let fizzBuzzFinal = [];
   for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 != 0) {
+    if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
       fizzBuzzFinal[index] = 'fizz';
-    } else if (numbers[index] % 3 != 0 && numbers[index] % 5 === 0) {
+    } else if (numbers[index] % 3 !== 0 && numbers[index] % 5 === 0) {
       fizzBuzzFinal[index] = 'buzz';
     } else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
       fizzBuzzFinal[index] = 'fizzBuzz';
     } else {
-    fizzBuzzFinal[index] = 'bug!'
+      fizzBuzzFinal[index] = 'bug!'
     }
   }
   return fizzBuzzFinal;
 }
 
-console.log(fizzBuzz([2, 15, 7, 9, 45]))
-
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(frase) {
+  let fraseEncode = '';
+  for (let index = 0; index < frase.length; index += 1) {
+    switch(frase[index]) {
+      case 'a':
+        fraseEncode = fraseEncode + 1;
+        break;
+     case 'e':
+        fraseEncode = fraseEncode + 2;
+        break;
+      case 'i':
+        fraseEncode = fraseEncode + 3;
+        break;
+      case 'o':
+        fraseEncode = fraseEncode + 4;
+        break;
+      case 'u':
+        fraseEncode = fraseEncode + 5;
+        break;
+      default:
+        fraseEncode = fraseEncode + frase[index];
+    }
+  }
+  return fraseEncode;
 }
-function decode() {
-  // seu código aqui
+
+function decode(frase) {
+  let fraseDecode = '';
+  for (let index = 0; index < frase.length; index += 1) {
+    switch(frase[index]) {
+      case '1':
+        fraseDecode = fraseDecode + 'a';
+        break;
+     case '2':
+        fraseDecode = fraseDecode + 'e';
+        break;
+      case '3':
+        fraseDecode = fraseDecode + 'i';
+        break;
+      case '4':
+        fraseDecode = fraseDecode + 'o';
+        break;
+      case '5':
+        fraseDecode = fraseDecode + 'u';
+        break;
+      default:
+        fraseDecode = fraseDecode + frase[index];
+    }
+  }
+  return fraseDecode;
 }
+console.log(decode('h3 th2r2!'))
 
 module.exports = {
   calcArea,
