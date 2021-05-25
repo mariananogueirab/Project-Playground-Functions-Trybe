@@ -24,11 +24,12 @@ function concatName(array) {
   return frase;
 }
 
-
-
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins, ties) {
+  let pointsOfWins = wins * 3;
+  let pointsOfTies = ties * 1;
+  let totalOfPoints = pointsOfWins + pointsOfTies;
+  return totalOfPoints
 }
 
 // Desafio 6
