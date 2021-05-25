@@ -1,9 +1,9 @@
 // Desafio 1
 function compareTrue(value1, value2) {
-  if ( value1 === true && value2 === true){
+  if (value1 === true && value2 === true) {
     return true;
   }
-   return false;
+  return false;
 }
 
 // Desafio 2
@@ -15,12 +15,12 @@ function calcArea(base, height) {
 // Desafio 3
 function splitSentence(sentence) {
   let sentenceArray = sentence.split(' ');
-  return sentenceArray
+  return sentenceArray;
 }
 
 // Desafio 4
 function concatName(array) {
-  frase = array[array.length -1] + ', ' + array[0];
+  let frase = array[array.length - 1] + ', ' + array[0];
   return frase;
 }
 
@@ -29,25 +29,25 @@ function footballPoints(wins, ties) {
   let pointsOfWins = wins * 3;
   let pointsOfTies = ties * 1;
   let totalOfPoints = pointsOfWins + pointsOfTies;
-  return totalOfPoints
+  return totalOfPoints;
 }
 
 // Desafio 6
 
 function highestNumber(numbers) {
   let biggerNumber = numbers[0];
-  for (index = 0; index < numbers.length; index += 1) {
+  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] > biggerNumber) {
       biggerNumber = numbers[index];
     }
   }
-  return biggerNumber
+  return biggerNumber;
 }
 
 function highestCount(numbers) {
   let biggerNumber = highestNumber(numbers);
   let count = 0;
-  for (index = 0; index < numbers.length; index +=1) {
+  for (let index = 0; index < numbers.length; index += 1) {
     if (numbers[index] === biggerNumber) {
       count += 1;
     }
