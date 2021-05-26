@@ -75,9 +75,8 @@ function hydrate(frase) {
   }
   if (totalOfDrinks > 1) {
     return totalOfDrinks + ' copos de água';
-  } else {
-    return totalOfDrinks + ' copo de água';
   }
+  return totalOfDrinks + ' copo de água';
 }
 
 module.exports = {
