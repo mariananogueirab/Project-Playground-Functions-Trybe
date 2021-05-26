@@ -86,8 +86,8 @@ function fizzBuzz(numbers) {
 // Desafio 9
 function encode(frase) {
   let fraseEncode = '';
-  for (let index = 0; index < frase.length; index += 1) {
-    switch (frase[index]) {
+  for (let key in frase) {
+    switch (frase[key]) {
     case 'a':
       fraseEncode += 1;
       break;
@@ -104,7 +104,7 @@ function encode(frase) {
       fraseEncode += 5;
       break;
     default:
-      fraseEncode += frase[index];
+      fraseEncode += frase[key];
     }
   }
   return fraseEncode;
@@ -112,8 +112,8 @@ function encode(frase) {
 
 function decode(frase) {
   let fraseDecode = '';
-  for (let index = 0; index < frase.length; index += 1) {
-    switch (frase[index]) {
+  for (let key in frase) {
+    switch (frase[key]) {
     case '1':
       fraseDecode += 'a';
       break;
@@ -130,7 +130,7 @@ function decode(frase) {
       fraseDecode += 'u';
       break;
     default:
-      fraseDecode += frase[index];
+      fraseDecode += frase[key];
     }
   }
   return fraseDecode;
