@@ -89,22 +89,22 @@ function encode(frase) {
   for (let index = 0; index < frase.length; index += 1) {
     switch (frase[index]) {
     case 'a':
-      fraseEncode = fraseEncode + 1;
+      fraseEncode += 1;
       break;
     case 'e':
-      fraseEncode = fraseEncode + 2;
+      fraseEncode += 2;
       break;
     case 'i':
-      fraseEncode = fraseEncode + 3;
+      fraseEncode += 3;
       break;
     case 'o':
-      fraseEncode = fraseEncode + 4;
+      fraseEncode += 4;
       break;
     case 'u':
-      fraseEncode = fraseEncode + 5;
+      fraseEncode += 5;
       break;
     default:
-      fraseEncode = fraseEncode + frase[index];
+      fraseEncode += frase[index];
     }
   }
   return fraseEncode;
@@ -115,22 +115,22 @@ function decode(frase) {
   for (let index = 0; index < frase.length; index += 1) {
     switch (frase[index]) {
     case '1':
-      fraseDecode = fraseDecode + 'a';
+      fraseDecode += 'a';
       break;
     case '2':
-      fraseDecode = fraseDecode + 'e';
+      fraseDecode += 'e';
       break;
     case '3':
-      fraseDecode = fraseDecode + 'i';
+      fraseDecode += 'i';
       break;
     case '4':
-      fraseDecode = fraseDecode + 'o';
+      fraseDecode += 'o';
       break;
     case '5':
-      fraseDecode = fraseDecode + 'u';
+      fraseDecode += 'u';
       break;
     default:
-      fraseDecode = fraseDecode + frase[index];
+      fraseDecode += frase[index];
     }
   }
   return fraseDecode;
