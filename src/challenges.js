@@ -87,23 +87,17 @@ function fizzBuzz(numbers) {
 function encode(frase) {
   let fraseEncode = '';
   for (let key in frase) {
-    switch (frase[key]) {
-    case 'a':
+    if (frase[key] === 'a') {
       fraseEncode += 1;
-      break;
-    case 'e':
+    } else if (frase[key] === 'e') {
       fraseEncode += 2;
-      break;
-    case 'i':
+    } else if (frase[key] === 'i') {
       fraseEncode += 3;
-      break;
-    case 'o':
+    } else if (frase[key] === 'o') {
       fraseEncode += 4;
-      break;
-    case 'u':
+    } else if (frase[key] === 'u') {
       fraseEncode += 5;
-      break;
-    default:
+    } else {
       fraseEncode += frase[key];
     }
   }
@@ -113,23 +107,17 @@ function encode(frase) {
 function decode(frase) {
   let fraseDecode = '';
   for (let key in frase) {
-    switch (frase[key]) {
-    case '1':
+    if (frase[key] === '1') {
       fraseDecode += 'a';
-      break;
-    case '2':
+    } else if (frase[key] === '2') {
       fraseDecode += 'e';
-      break;
-    case '3':
+    } else if (frase[key] === '3') {
       fraseDecode += 'i';
-      break;
-    case '4':
+    } else if (frase[key] === '4') {
       fraseDecode += 'o';
-      break;
-    case '5':
+    } else if (frase[key] === '5') {
       fraseDecode += 'u';
-      break;
-    default:
+    } else {
       fraseDecode += frase[key];
     }
   }
