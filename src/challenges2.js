@@ -60,18 +60,28 @@ function generatePhoneNumber(phone) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC) && lineB < lineA + lineC && lineB > Math.abs(lineA - lineC) && lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+  let result1 = false;
+  let result2 = false;
+  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
+    result1 = true;
+  }
+  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
+    result2 = true;
+  }
+  if ( result1 === true && result2 === true) {
     return true;
-  } 
+  } else {
     return false;
+  }
 }
+triangleCheck(23, 14, 8)
 
 // Desafio 13
 function hydrate(frase) {
   let numberOfDrinks = frase.match(/[0-9]/g);
   let totalOfDrinks = 0;
-  for (let index = 0; index < numberOfDrinks.length; index +=1) {
-    totalOfDrinks = totalOfDrinks + parseInt(numberOfDrinks[index], 10);
+  for (let index = 0; index < numberOfDrinks.length; index += 1) {
+    totalOfDrinks += parseInt(numberOfDrinks[index], 10);
   }
   if (totalOfDrinks > 1) {
     return totalOfDrinks + ' copos de água';
