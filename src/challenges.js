@@ -60,7 +60,7 @@ function highestCount(numbers) {
 function catAndMouse(mouse, cat1, cat2) {
   if (Math.abs(cat1 - mouse) > Math.abs(cat2 - mouse)) {
     return 'cat2';
-  } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
+  } if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
   }
   return 'os gatos trombam e o rato foge';
@@ -69,15 +69,15 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(numbers) {
   let fizzBuzzFinal = [];
-  for (let index = 0; index < numbers.length; index += 1) {
-    if (numbers[index] % 3 === 0 && numbers[index] % 5 !== 0) {
-      fizzBuzzFinal[index] = 'fizz';
-    } else if (numbers[index] % 3 !== 0 && numbers[index] % 5 === 0) {
-      fizzBuzzFinal[index] = 'buzz';
-    } else if (numbers[index] % 3 === 0 && numbers[index] % 5 === 0) {
-      fizzBuzzFinal[index] = 'fizzBuzz';
+  for (let key in numbers) {
+    if (numbers[key] % 3 === 0 && numbers[key] % 5 !== 0) {
+      fizzBuzzFinal[key] = 'fizz';
+    } else if (numbers[key] % 3 !== 0 && numbers[key] % 5 === 0) {
+      fizzBuzzFinal[key] = 'buzz';
+    } else if (numbers[key] % 3 === 0 && numbers[key] % 5 === 0) {
+      fizzBuzzFinal[key] = 'fizzBuzz';
     } else {
-      fizzBuzzFinal[index] = 'bug!';
+      fizzBuzzFinal[key] = 'bug!';
     }
   }
   return fizzBuzzFinal;
