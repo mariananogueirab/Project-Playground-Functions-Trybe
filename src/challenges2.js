@@ -22,7 +22,7 @@ function checkNumber(phone) {
     for (let key in phone) {
       if (phone[key] === phone[index]) {
         count += 1;
-        if (count === 3 || count > 3) {
+        if (count >= 3) {
           return warning;
         }
       }
@@ -60,15 +60,16 @@ function generatePhoneNumber(phone) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  let result1 = false;
-  let result2 = false;
-  if (lineA < lineB + lineC && lineB < lineA + lineC && lineC < lineA + lineB) {
-    result1 = true;
-  }
-  if (lineA > Math.abs(lineB - lineC) && lineB > Math.abs(lineA - lineC) && lineC > Math.abs(lineA - lineB)) {
-    result2 = true;
-  }
-  if ( result1 === true && result2 === true) {
+  let resultA = false;
+  let resultB = false;
+  let resultC = false;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineB - lineC)) {
+    resultA = true;
+  } if (lineB < lineA + lineC && lineB > Math.abs(lineA - lineC)) {
+    resultB = true;
+  } if (lineC < lineA + lineB && lineC > Math.abs(lineA - lineB)) {
+    resultC = true;
+  } if ( resultA === true && resultB === true && resultC === true) {
     return true;
   } else {
     return false;
@@ -86,7 +87,7 @@ function hydrate(frase) {
   if (totalOfDrinks > 1) {
     return totalOfDrinks + ' copos de água';
   }
-  return totalOfDrinks + ' copo de água';
+    return totalOfDrinks + ' copo de água';
 }
 
 module.exports = {
