@@ -20,7 +20,8 @@ function splitSentence(sentence) {
 
 // Desafio 4
 function concatName(array) {
-  let frase = array[array.length - 1] + ', ' + array[0];
+  let virgula = ', ';
+  let frase = array[array.length - 1].concat(virgula, array[0]);
   return frase;
 }
 
