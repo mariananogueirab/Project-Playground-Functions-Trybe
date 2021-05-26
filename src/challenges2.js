@@ -11,27 +11,28 @@ function techList(technologies, name) {
     }
     return techObjects;
   }
-    return 'Vazio!';
+  return 'Vazio!';
 }
 
 // Desafio 11
 function checkNumber(phone) {
   let count = 0;
-  for (let index = 0; index < phone.length; index +=1 ) {
+  const warning = 'não é possível gerar um número de telefone com esses valores';
+  for (let index = 0; index < phone.length; index += 1 ) {
     for (let key in phone) {
-        if (phone[key] === phone[index]) {
-          count += 1;
-          if (count === 3 || count > 3) {
-            return 'não é possível gerar um número de telefone com esses valores';
-          }
+      if (phone[key] === phone[index]) {
+        count += 1;
+        if (count === 3 || count > 3) {
+          return warning;
         }
+      }
     }
     count = 0;
     if (phone[index] < 0 || phone[index] > 9) {
-      return 'não é possível gerar um número de telefone com esses valores';
+      return warning;
     }
   }
-  return 'Ok'
+  return 'Ok';
 }
 
 function generatePhoneNumber(phone) {
@@ -40,8 +41,9 @@ function generatePhoneNumber(phone) {
   let phone1 = '';
   let phone2 = '';
   if (phone.length !== 11) {
-    return 'Array com tamanho incorreto.'
-  } else if (check === 'Ok') {
+    return 'Array com tamanho incorreto.';
+  }
+  if (check === 'Ok') {
     for (let index = 0; index < 2; index += 1) {
       ddd = ddd + phone[index];
     }
