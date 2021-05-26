@@ -87,24 +87,24 @@ function fizzBuzz(numbers) {
 function encode(frase) {
   let fraseEncode = '';
   for (let index = 0; index < frase.length; index += 1) {
-    switch(frase[index]) {
-      case 'a':
-        fraseEncode = fraseEncode + 1;
-        break;
-     case 'e':
-        fraseEncode = fraseEncode + 2;
-        break;
-      case 'i':
-        fraseEncode = fraseEncode + 3;
-        break;
-      case 'o':
-        fraseEncode = fraseEncode + 4;
-        break;
-      case 'u':
-        fraseEncode = fraseEncode + 5;
-        break;
-      default:
-        fraseEncode = fraseEncode + frase[index];
+    switch (frase[index]) {
+    case 'a':
+      fraseEncode = fraseEncode + 1;
+      break;
+    case 'e':
+      fraseEncode = fraseEncode + 2;
+      break;
+    case 'i':
+      fraseEncode = fraseEncode + 3;
+      break;
+    case 'o':
+      fraseEncode = fraseEncode + 4;
+      break;
+    case 'u':
+      fraseEncode = fraseEncode + 5;
+      break;
+    default:
+      fraseEncode = fraseEncode + frase[index];
     }
   }
   return fraseEncode;
@@ -113,24 +113,24 @@ function encode(frase) {
 function decode(frase) {
   let fraseDecode = '';
   for (let index = 0; index < frase.length; index += 1) {
-    switch(frase[index]) {
-      case '1':
-        fraseDecode = fraseDecode + 'a';
-        break;
-     case '2':
-        fraseDecode = fraseDecode + 'e';
-        break;
-      case '3':
-        fraseDecode = fraseDecode + 'i';
-        break;
-      case '4':
-        fraseDecode = fraseDecode + 'o';
-        break;
-      case '5':
-        fraseDecode = fraseDecode + 'u';
-        break;
-      default:
-        fraseDecode = fraseDecode + frase[index];
+    switch (frase[index]) {
+    case '1':
+      fraseDecode = fraseDecode + 'a';
+      break;
+    case '2':
+      fraseDecode = fraseDecode + 'e';
+      break;
+    case '3':
+      fraseDecode = fraseDecode + 'i';
+      break;
+    case '4':
+      fraseDecode = fraseDecode + 'o';
+      break;
+    case '5':
+      fraseDecode = fraseDecode + 'u';
+      break;
+    default:
+      fraseDecode = fraseDecode + frase[index];
     }
   }
   return fraseDecode;
