@@ -5,8 +5,8 @@ function techList(technologies, name) {
   if (technologies.length !== 0) {
     for (let index = 0; index < technologiesSort.length; index += 1) {
       techObjects[index] = {
-        tech: technologiesSort[index],
-        name: name,
+        'tech': technologiesSort[index],
+        'name': name,
       };
     }
     return techObjects;
