@@ -6,7 +6,7 @@ function techList(technologies, name) {
     for (let index = 0; index < technologiesSort.length; index += 1) {
       techObjects[index] = {
         tech: technologiesSort[index],
-        name: name,
+        name,
       };
     }
     return techObjects;
