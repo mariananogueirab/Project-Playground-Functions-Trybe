@@ -17,7 +17,9 @@
 
 ## Para instalar as dependências do projeto:
 
-  Use o: npm install
+```bash
+npm install
+```
 
 ## Para rodar o avaliador automático localmente:
 Execute um dos comandos abaixo:
